@@ -1,7 +1,7 @@
 "use strict"
 let carouselInner = document.querySelector('.carousel-inner')
 
-fetch('http://127.0.0.1:8000/main/get-announcement-list')
+fetch('https://ayyubxon.pythonanywhere.com/main/get-announcement-list')
 .then(res=>res.json())
 .then(data =>{
         data ? renderCarousel(data) : ''
@@ -16,7 +16,7 @@ function renderCarousel(data){
         ++k
         carouselInner.innerHTML += 
         `<div class="carousel-item ${k === 1 ? 'active' : ''}">
-            <img src="http://127.0.0.1:8000/${item.img1}" class="d-block w-100 h-100 carousel-img" alt="Чистый дом">
+            <img src="https://ayyubxon.pythonanywhere.com/${item.img1}" class="d-block w-100 h-100 carousel-img" alt="Чистый дом">
             <div class="carousel-caption d-none d-md-block">
             <h5>${item.title}</h5>
             <p>${item.description}</p>
