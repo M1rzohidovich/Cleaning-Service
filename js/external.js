@@ -30,7 +30,7 @@ function portfolioCard(portfolioData){
     listItem.setAttribute('id', portfolioData.id)
 
     const cardImg = elProductCard.querySelector('.service-card__img');
-    cardImg.setAttribute('src', portfolioData.img ? `https://ayyubxon.pythonanywhere.com/${portfolioData.img}` : "../img/search.png")
+    cardImg.setAttribute('src', portfolioData.img ? `https://anonimuser.pythonanywhere.com/${portfolioData.img}` : "../img/search.png")
     cardImg.setAttribute('alt', "Чистый дом")
 
     const cardTitle = elProductCard.querySelector('.servicePage-list__title');
@@ -50,7 +50,7 @@ const renderFunction = (array = portfolioData) => {
 }
 // Fetch get
 
-fetch('https://ayyubxon.pythonanywhere.com/main/get-external-blog')
+fetch('https://anonimuser.pythonanywhere.com/main/get-external-blog')
 .then(res=>res.json())
 .then(data =>{
     localStorage.setItem('cardData', JSON.stringify(data))
@@ -122,7 +122,7 @@ async function postData(url = '', data = {}) {
         order: orderId
     }
 
-    postData('https://ayyubxon.pythonanywhere.com/client/external-client-create', data)
+    postData('https://anonimuser.pythonanywhere.com/client/external-client-create', data)
     .then((data) => {
       (data.fullname[0] == 'This field may not be blank.') ? alert('Произошло ошибка ведите данные заново') : alert("Zakasingiz qabul qilindi ! Tez orada bizning operatorlarimiz siz bilan boglanishadi.")
     }).catch((err)=>{
