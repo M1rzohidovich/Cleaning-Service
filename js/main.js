@@ -1,7 +1,7 @@
 "use strict"
 let carouselInner = document.querySelector('.carousel-inner')
 
-fetch('https://ayyubxon.pythonanywhere.com/main/get-announcement-list')
+fetch('https://anonimuser.pythonanywhere.com/main/get-announcement-list')
 .then(res=>res.json())
 .then(data =>{
         data ? renderCarousel(data) : ''
