@@ -8,7 +8,7 @@ function renderCard(){
 
     Cards.map(element => {
     if(element.id === cardId)  {
-        singleImg.setAttribute('src', `https://ayyubxon.pythonanywhere.com/${element.img}`)
+        singleImg.setAttribute('src', `https://anonimuser.pythonanywhere.com/${element.img}`)
         singleImg.setAttribute('alt', "Чистый дом")
         singlePageTitle.innerHTML = element.title
         singleText.innerHTML = element.description
