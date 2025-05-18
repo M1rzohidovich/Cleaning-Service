@@ -1,6 +1,6 @@
 let cardList = document.querySelector('.humans-list');
 
-fetch('https://ayyubxon.pythonanywhere.com/main/get-contact')
+fetch('https://anonimuser.pythonanywhere.com/main/get-contact')
 .then(res=>res.json())
 .then(data =>{
     renderHumans(data);
